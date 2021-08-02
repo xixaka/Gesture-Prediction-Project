@@ -1,0 +1,92 @@
+ 
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">Gesture Prediction Project. (Click For Some Information On The Project :])</button>
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&cross;</button>
+        <h4 class="modal-title">List Of Objects</h4>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 22px; color: black">Take a photo of your gesture with a blue background to get best predictions! The teachable machine model is able to identify the gestures given below :)</p>
+        <br>
+        <p>
+          <span>✌</span>
+          <hr>
+          <span>👌</span>
+          <hr>
+          <span>👍</span>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Back To Project</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      <br><br>
+
+      <p class="text1">Take a photo of your gesture with a blue background to get best predictions!
+        <br>
+      </p>
+
+      <div class="col-md-4 col-sm-4 col-xs-4">
+        <label>Webcam View</label>
+        <div id="camera"></div>
+        <br><br>
+        <button onclick="f_click()"class="btn btn-warning">Capture Image</button>
+      </div>
+
+      <div class="col-md-4 col-sm-4 col-xs-4">
+	      <label>Gesture 1 - </label>
+        <p class="Gesture_name" id="prediction_name"></p>
+        <p class="emoji" id="update_gesture"></p>
+
+        <label>Gesture 2 - </label>
+        <p class="Gesture_name" id="prediction_name_2"></p>
+        <p class="emoji" id="update_gesture_2"></p>
+      </div>
+
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Gesture Image - </label>
+        <div id="result"></div>
+        <br><br>
+        <button onclick="predict()"class="btn btn-warning">Get Prediction</button>
+        <br><br>
+
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
